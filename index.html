@@ -1,17 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etch-a-Sketch Web App</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <button>Change grid size</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etch-a-Sketch Retro Console</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- Font Awesome untuk Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <header>
+        <h1><i class="fa-solid fa-wand-magic-sparkles"></i>Etch-a-Sketch</h1>
+        <p>Sketch your imagination pixel by pixel</p>
+      </header>
 
-    <div class="grid-container">
+      <main class="console-box">
+        <section class="control-panel">
+          <div class="control-group">
+            <div class="group-header">
+              <h3><i class="fa-solid fa-border-all"></i> Grid Resolution</h3>
+
+              <span id="grid-size-label">16 × 16</span>
+            </div>
+
+            <input type="range" min="1" max="100" value="16" id="grid-slider" class="stylesheet">
+          </div>
+
+          <div class="control-group">
+            <h3><i class="fa-solid fa-palette"></i> Drawing Tools</h3>
+
+            <div class="tools-grid">
+              <button id="black-mode" class="tool-btn active">
+                <i class="fa-solid fa-pencil"></i> Classic Black
+              </button>
+
+              <button id="color-mode" class="tool-btn">
+                <i class="fa-solid fa-paint-roller"></i> Custom Color
+                <input type="color" id="color-picker" value="#000000" />
+              </button>
+
+              <button id="rainbow-mode" class="tool-btn">
+                <i class="fa-solid fa-rainbow"></i> Rainbow Mode
+              </button>
+
+              <button id="eraser-mode" class="tool-btn">
+                <i class="fa-solid fa-eraser"></i> Eraser
+              </button>
+            </div>
+          </div>
+
+          <div class="control-group utilities">
+            <h3><i class="fa-solid fa-gears"></i> Utilities</h3>
+
+            <div class="actions-row">
+              <button id="toogle-grid" class="action-btn">
+                <i class="fa-solid fa-square-minus"></i> Toggle Grid Lines
+              </button>
+
+              <button id="clear" class="action-btn danger-btn">
+                <i class="fa-solid fa-trash-can"></i> Clear Canvas
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="canvas-wrapper">
+          <div class="canvas-border-frame">
+            <div class="grid-container" id="grid-container"></div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="app-footer">
+        <p>Built with <i class="fa-solid fa-heart" style="color: #ef4444;"></i> for The Odin Project</p>
+      </footer>
     </div>
-    
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
