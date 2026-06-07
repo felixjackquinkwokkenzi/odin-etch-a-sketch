@@ -13,7 +13,7 @@
   </head>
   <body>
     <div class="app-container">
-      <header>
+      <header class="app-header">
         <h1><i class="fa-solid fa-wand-magic-sparkles"></i>Etch-a-Sketch</h1>
         <p>Sketch your imagination pixel by pixel</p>
       </header>
@@ -27,7 +27,7 @@
               <span id="grid-size-label">16 × 16</span>
             </div>
 
-            <input type="range" min="1" max="100" value="16" id="grid-slider" class="stylesheet">
+            <input type="range" min="1" max="100" value="16" id="grid-slider" class="styled-slider">
           </div>
 
           <div class="control-group">
@@ -40,7 +40,7 @@
 
               <button id="color-mode" class="tool-btn">
                 <i class="fa-solid fa-paint-roller"></i> Custom Color
-                <input type="color" id="color-picker" value="#000000" />
+                <input type="color" id="color-picker" value="#3b82f6" />
               </button>
 
               <button id="rainbow-mode" class="tool-btn">
@@ -57,7 +57,7 @@
             <h3><i class="fa-solid fa-gears"></i> Utilities</h3>
 
             <div class="actions-row">
-              <button id="toogle-grid" class="action-btn">
+              <button id="toggle-grid" class="action-btn">
                 <i class="fa-solid fa-square-minus"></i> Toggle Grid Lines
               </button>
 
